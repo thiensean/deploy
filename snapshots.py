@@ -35,7 +35,7 @@ if uploaded_file is not None:
     file_bytes = byte_arr.getvalue()
     
     # Send the resized image to the FastAPI server
-    ngrok_url = "https://5899-35-230-98-55.ngrok-free.app"  # Replace with your actual Ngrok URL
+    ngrok_url = "https://f077-35-221-222-158.ngrok-free.app"  # Replace with your actual Ngrok URL
     response = requests.post(f"{ngrok_url}/process-image/", files={"file": ("resized_image.png", file_bytes, "image/png")})
     
     if response.status_code == 200:
